@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Printstore from './printstore';
+import Actions from './action';
+import {useSelector} from "react-redux"
 
 function App() {
+  const count=useSelector((store)=>{return store})
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+ redux={count}
+ 
+ <Printstore/>
+ <Actions/>
     </div>
   );
 }
